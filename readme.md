@@ -35,3 +35,9 @@ Generate ipa from latest react build
 ```bash
 npm run build:cordova -- ios
 ```
+
+Generate electorn app from latest react build
+
+```bash
+npm run build:electron
+```
