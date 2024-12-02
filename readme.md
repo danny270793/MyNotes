@@ -35,3 +35,15 @@ Generate ipa from latest react build
 ```bash
 npm run build:cordova -- ios
 ```
+
+Generate macos executable from latest react build
+
+```bash
+npm run build:electron
+```
+
+Run macos app
+
+```bash
+npm run run:cordova
+```
