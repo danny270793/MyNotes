@@ -42,8 +42,20 @@ Generate macos executable from latest react build
 npm run build:electron
 ```
 
+Run in android suimulator
+
+```bash
+npm run start:cordova -- android
+```
+
+Run in ios suimulator
+
+```bash
+npm run start:cordova -- ios
+```
+
 Run macos app
 
 ```bash
-npm run run:cordova
+npm run start:electron
 ```
