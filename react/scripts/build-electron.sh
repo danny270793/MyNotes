@@ -14,4 +14,4 @@ sed -i '' 's|href="/|href="./|g' ./www/index.html
 sed -i '' 's|="/|="./|g' ./www/static/js/main.*.js
 
 echo '[ ] generate the app'
-electron-packager . MyNotes --arch=arm64,x64 --platform=darwin --out=dist/ --overwrite
+npx electron-packager . MyNotes --arch=arm64,x64 --platform=darwin --out=dist/ --overwrite
