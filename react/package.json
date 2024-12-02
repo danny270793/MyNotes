@@ -18,7 +18,9 @@
   },
   "scripts": {
     "start:react": "react-scripts start",
+    "start:cordova": "sh ./scripts/start-cordova.sh",
     "build:react": "react-scripts build",
+    "build:cordova": "sh ./scripts/build-cordova.sh",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
