@@ -29,5 +29,10 @@ export const safeStringify = (obj: any, space?: string | number): string => {
     }
   }
 
-  return JSON.stringify(traverseAndClean('', obj), null, space);
+  return JSON.stringify(traverseAndClean('', obj),  (key, value) => {
+    if (typeof value === 'function') {
+      return '[Function]';
+    }
+    return value;
+  }, space);
 }
