@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
+import { Splash } from './pages/Splash';
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(
@@ -11,7 +11,7 @@ const root = ReactDOM.createRoot(
 const onDeviceReady = (): void => {
   root.render(
     <React.StrictMode>
-      <App />
+      <Splash />
     </React.StrictMode>
   );
 }
