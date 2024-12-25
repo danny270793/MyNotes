@@ -93,3 +93,9 @@ Initialize linter
 ```bash
 npx eslint --init
 ```
+
+To lint project
+
+```bash
+npm run lint
+```
