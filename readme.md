@@ -77,3 +77,19 @@ Generate electorn app (based on last react build)
 ```bash
 npm run build:electron
 ```
+
+## Developer
+
+### Eslint
+
+Install react plugin
+
+```bash
+npm install eslint eslint-plugin-react --save-dev
+```
+
+Initialize linter
+
+```bash
+npx eslint --init
+```
