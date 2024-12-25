@@ -15,9 +15,11 @@ function App() {
         </p>
         
         <div>
-          <input type='checkbox' checked={platform == 'CORDOVA'} readOnly/> Cordova
+          <input type='checkbox' checked={platform == 'CORDOVA'} readOnly/> Mobile
           <br/>
           <input type='checkbox' checked={platform == 'WEB'} readOnly/> Web
+          <br/>
+          <input type='checkbox' checked={platform == 'ELECTRON'} readOnly/> Desktop
         </div>
       </header>
     </div>
