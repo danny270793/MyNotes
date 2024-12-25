@@ -4,7 +4,7 @@ PLATFORM="$1"
 CORDOVA_APP_PATH=../cordova
 
 echo '[ ] copy build to cordova'
-rm -r ${CORDOVA_APP_PATH}/www
+rm -rf ${CORDOVA_APP_PATH}/www
 cp -r ./build ${CORDOVA_APP_PATH}/www
 
 cd ${CORDOVA_APP_PATH}
