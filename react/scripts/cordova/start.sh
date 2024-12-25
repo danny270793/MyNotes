@@ -13,7 +13,7 @@ fi
 cd ${CORDOVA_APP_PATH}
 if [[ "${PLATFORM}" == "ios" ]]
 then
-    cordova run "${PLATFORM}" --target="iPhone-16-Plus"
+    npx cordova run "${PLATFORM}" --target="iPhone-16-Plus"
 else
-    cordova run "${PLATFORM}"
+    npx cordova run "${PLATFORM}"
 fi

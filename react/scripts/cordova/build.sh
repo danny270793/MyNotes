@@ -27,7 +27,7 @@ cd ${CORDOVA_APP_PATH}
 sed -i '' 's|</title>|</title><script type="text/javascript" src="cordova.js"></script>|' ./www/index.html
 
 echo "[ ] add platform ${PLATFORM}"
-cordova platform add "${PLATFORM}" && echo 'Platform already added'
+npx cordova platform add "${PLATFORM}" && echo 'Platform already added'
 
 echo '[ ] build in cordova'
-cordova build "${PLATFORM}"
+npx cordova build "${PLATFORM}"
