@@ -1,10 +1,18 @@
 set -e
 
 ELECTRON_APP_PATH=../electron
+BUILD_PATH=./build
+
+if [ ! -e "${BUILD_PATH}" ]
+then
+  echo "build does not exists, generate it first"
+  echo "\tnpm run react:build"
+  exit 1
+fi
 
 echo '[ ] copy build to electron'
 rm -r ${ELECTRON_APP_PATH}/www
-cp -r ./build ${ELECTRON_APP_PATH}/www
+cp -r "${BUILD_PATH}" ${ELECTRON_APP_PATH}/www
 
 cd ${ELECTRON_APP_PATH}
 
