@@ -15,14 +15,10 @@ export const Splash = (): ReactElement => {
       return
     }
     try {
-      console.log('checking fingerprint')
       await Fingerprint.isAvailable()
-      console.log('requesting fingerprint')
       await Fingerprint.request()
-      console.log('done')
       setIsLoading(false)
     } catch (error) {
-      console.error(`error ${safeStringify(error)}`)
       requestFingerprint()
     }
   }
