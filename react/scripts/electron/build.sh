@@ -11,7 +11,7 @@ then
 fi
 
 echo '[ ] copy build to electron'
-rm -r ${ELECTRON_APP_PATH}/www
+rm -rf ${ELECTRON_APP_PATH}/www
 cp -r "${BUILD_PATH}" ${ELECTRON_APP_PATH}/www
 
 cd ${ELECTRON_APP_PATH}
