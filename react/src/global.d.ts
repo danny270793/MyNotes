@@ -1,11 +1,11 @@
-import { Fingerprint } from "./utils/fingerprint";
+import { Fingerprint } from './utils/fingerprint'
 
-export {};
+export {}
 
 declare global {
   interface Window {
-    cordova: unknown|undefined;
-    Fingerprint: Fingerprint;
-    electron: unknown|undefined;
+    cordova: unknown | undefined
+    Fingerprint: Fingerprint
+    electron: unknown | undefined
   }
 }

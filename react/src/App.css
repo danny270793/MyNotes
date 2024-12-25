@@ -45,7 +45,7 @@
   overflow-x: auto; /* Enable horizontal scrolling */
   width: 100%; /* Full width */
   font-size: 14px;
-  font-family: "Courier New", monospace;
+  font-family: 'Courier New', monospace;
   white-space: pre-wrap; /* Ensures the content wraps */
   word-wrap: break-word; /* Wraps long words */
   box-sizing: border-box; /* Ensure padding is accounted for in the width */
