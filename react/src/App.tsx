@@ -14,7 +14,7 @@ function App() {
           Edit <code>src/App.tsx</code> and save to reload.
         </p>
         
-        <div>
+        <div style={{textAlign: 'left'}}>
           <input type='checkbox' checked={platform == 'CORDOVA'} readOnly/> Mobile
           <br/>
           <input type='checkbox' checked={platform == 'WEB'} readOnly/> Web
