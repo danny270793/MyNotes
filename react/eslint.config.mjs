@@ -11,4 +11,19 @@ export default [
   pluginJs.configs.recommended,
   ...tseslint.configs.recommended,
   pluginReact.configs.flat.recommended,
+  {
+    rules: {
+      'react/react-in-jsx-scope': 'off',
+    },
+  },
+  {
+    ignores: ['node_modules/', 'dist/', 'build/'],
+  },
+  {
+    settings: {
+      react: {
+        version: 'detect'
+      },
+    },
+  },
 ];

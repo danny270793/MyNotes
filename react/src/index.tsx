@@ -16,7 +16,7 @@ const onDeviceReady = (): void => {
   );
 }
 
-if((window as any).cordova) {
+if(window.cordova) {
   document.addEventListener('deviceready', onDeviceReady, false)
 } else {
   onDeviceReady()

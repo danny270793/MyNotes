@@ -1,7 +1,7 @@
-export const safeStringify = (obj: any, space?: string | number): string => {
-    const seen = new WeakMap<any, string>();
+export const safeStringify = (obj: unknown, space?: string | number): string => {
+    const seen = new WeakMap<object, string>();
 
-  function traverseAndClean(key: string, value: any, parentPath: string = 'root'): any {
+  function traverseAndClean(key: string, value: unknown, parentPath: string = 'root'): unknown {
     // Handle primitives and functions
     if (value === null || typeof value !== 'object') {
       return value;
@@ -19,10 +19,10 @@ export const safeStringify = (obj: any, space?: string | number): string => {
     if (Array.isArray(value)) {
       return value.map((item, index) => traverseAndClean(`${index}`, item, `${parentPath}${key ? `.${key}` : ''}`));
     } else {
-      const cleanedObj: any = {};
+      const cleanedObj: Record<string, unknown> = {};
       for (const prop in value) {
-        if (value.hasOwnProperty(prop)) {
-          cleanedObj[prop] = traverseAndClean(prop, value[prop], `${parentPath}${key ? `.${key}` : ''}`);
+        if (Object.prototype.hasOwnProperty.call(value, prop)) {
+          cleanedObj[prop] = traverseAndClean(prop, (value as Record<string, unknown>)[prop], `${parentPath}${key ? `.${key}` : ''}`);
         }
       }
       return cleanedObj;

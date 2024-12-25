@@ -1,12 +1,12 @@
 import { useEffect, useState, ReactElement } from 'react';
 import logo from '../logo.svg';
 import '../App.css';
-import { Platform, usePlatform } from '../hooks/usePlatform';
+import { Platform, getCurrentPlatform } from '../utils/platform';
 import * as Fingerprint from '../utils/fingerprint';
 import { safeStringify } from '../utils/json';
 
 export const Splash = (): ReactElement => {
-  const platform: Platform = usePlatform()
+  const platform: Platform = getCurrentPlatform()
   const [isLoading, setIsLoading] = useState<boolean>(true)
 
   const requestFingerprint: () => void = async () => {
@@ -19,6 +19,7 @@ export const Splash = (): ReactElement => {
       await Fingerprint.request()
       setIsLoading(false)
     } catch (error) {
+      console.error(`error on fingerprint authentication ${safeStringify(error)}`)
       requestFingerprint()
     }
   }

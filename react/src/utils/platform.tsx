@@ -1,7 +1,6 @@
 export type Platform = 'WEB'|'CORDOVA'|'ELECTRON'
 
-export const usePlatform = (): Platform => {
-    
+export const getCurrentPlatform = (): Platform => {
     if(window.cordova) {
         return 'CORDOVA'
     }
