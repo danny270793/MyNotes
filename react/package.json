@@ -22,6 +22,8 @@
     "cordova:build": "sh ./scripts/cordova/build.sh",
     "cordova:start": "sh ./scripts/cordova/start.sh",
     "cordova": "cd ../cordova && npx cordova",
+    "cordova:android": "npm run react:build && npm run cordova:build android && npm run cordova:start android",
+    "cordova:ios": "npm run react:build && npm run cordova:build ios && npm run cordova:start ios",
     "electron:build": "sh ./scripts/electron/build.sh",
     "electron:start": "sh ./scripts/electron/start.sh",
     "test": "react-scripts test",
