@@ -16,27 +16,63 @@ Create cordova app
 npx cordova create ./cordova io.github.danny270793.mynotes MyNotes
 ```
 
-## Final app
+## Work with it
 
-Take react files and generate static html, css and js
+### For the web
 
-```bash
-npm run build:react
-```
-
-Generate apk from latest react build
+Work on the web version of the app
 
 ```bash
-npm run build:cordova -- android
+npm run react:start
 ```
 
-Generate ipa from latest react build
+Generate static html, css and js to deploy it
 
 ```bash
-npm run build:cordova -- ios
+npm run react:build
 ```
 
-Generate electorn app from latest react build
+### For mobile
+
+Build the latest version of the web app
+
+```bash
+npm run react:build
+```
+
+Start on android emulator (based on last react build)
+
+```bash
+npm run cordova:start android
+```
+
+Start on ios emulator (based on last react build)
+
+```bash
+npm run cordova:start ios
+```
+
+Generate apk (based on last react build)
+
+```bash
+npm run cordova:build android
+```
+
+Generate ipa (based on last react build)
+
+```bash
+npm run cordova:build ios
+```
+
+### For desktop
+
+Build the latest version of the web app
+
+```bash
+npm run react:build
+```
+
+Generate electorn app (based on last react build)
 
 ```bash
 npm run build:electron
