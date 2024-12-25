@@ -16,6 +16,8 @@ cp -r "${BUILD_PATH}" ${ELECTRON_APP_PATH}/www
 
 cd ${ELECTRON_APP_PATH}
 
+npm install
+
 echo '[ ] modify files to run on electron'
 sed -i '' 's|src="/|src="./|g' ./www/index.html
 sed -i '' 's|href="/|href="./|g' ./www/index.html
