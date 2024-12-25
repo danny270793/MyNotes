@@ -2,6 +2,7 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 import { Platform, usePlatform } from './hooks/usePlatform';
+import { safeStringify } from './utils/json';
 
 function App() {
   const platform: Platform = usePlatform()
@@ -15,11 +16,14 @@ function App() {
         </p>
         
         <div style={{textAlign: 'left'}}>
-          <input type='checkbox' checked={platform == 'CORDOVA'} readOnly/> Mobile
+          <input type='checkbox' checked={platform === 'CORDOVA'} readOnly/> Mobile
           <br/>
-          <input type='checkbox' checked={platform == 'WEB'} readOnly/> Web
+          <input type='checkbox' checked={platform === 'WEB'} readOnly/> Web
           <br/>
-          <input type='checkbox' checked={platform == 'ELECTRON'} readOnly/> Desktop
+          <input type='checkbox' checked={platform === 'ELECTRON'} readOnly/> Desktop
+        </div>
+        <div style={{textAlign: 'left'}}>
+          <pre className='App-json'>{safeStringify(window, 4)}</pre>
         </div>
       </header>
     </div>

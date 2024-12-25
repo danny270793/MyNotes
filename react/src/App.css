@@ -1,4 +1,5 @@
 .App {
+  background-color: #282c34;
   text-align: center;
 }
 
@@ -14,7 +15,6 @@
 }
 
 .App-header {
-  background-color: #282c34;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -35,4 +35,18 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.App-json {
+  text-align: left; /* Align text to the left */
+  padding: 10px;
+  max-height: 400px; /* Limit the height of the pre for scrolling */
+  overflow-y: auto; /* Enable vertical scrolling */
+  overflow-x: auto; /* Enable horizontal scrolling */
+  width: 100%; /* Full width */
+  font-size: 14px;
+  font-family: "Courier New", monospace;
+  white-space: pre-wrap; /* Ensures the content wraps */
+  word-wrap: break-word; /* Wraps long words */
+  box-sizing: border-box; /* Ensure padding is accounted for in the width */
 }
