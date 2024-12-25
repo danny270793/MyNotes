@@ -21,7 +21,7 @@
     "react:start": "react-scripts start",
     "cordova:build": "sh ./scripts/cordova/build.sh",
     "cordova:start": "sh ./scripts/cordova/start.sh",
-    "cordova": "cd ../cordova && cordova",
+    "cordova": "cd ../cordova && npx cordova",
     "electron:build": "sh ./scripts/electron/build.sh",
     "electron:start": "sh ./scripts/electron/start.sh",
     "test": "react-scripts test",
